@@ -1,0 +1,72 @@
+/* body */
+
+body {
+    background-color: #FFFFFF;
+    color: #757575;
+}
+
+.list {
+    list-style: none;
+}
+/* Этот селектор .list выключает точки
+в тех списках ul в класс которых 
+мы его вставляем!  а можно выключить 
+все точки на всем сайте написавши
+ul {list-style: none;} */
+
+/* header */
+/* nav */
+.logo { 
+    color: ;
+
+}
+
+.logo-web {
+    color: #2196F3;
+}
+
+.logo-studio {
+    color: #000000;
+}
+
+/* site-nav */
+
+.site-nav .link {
+    color: #212121;
+}
+
+.site-nav .link:hover,
+.site-nav .link:focus {
+    color: #2196F3;
+}
+
+/* connecrion */
+
+
+
+/* main */
+/* section-hero */
+
+.section-hero { 
+    color: #FFFFFF;
+}
+
+.section-hero-title {
+
+}
+
+/* section  */
+.section-title {
+    color: #212121;
+}
+
+.feature-list
+
+
+ /* основной цвет фона #FFFFFF */
+ /* вторичный цвет фона #F5F4FA */
+
+ /* основной цвет текста #757575*/
+ /* вторичній цвет текста #212121  */
+
+ /* акцент #2196F3 */
