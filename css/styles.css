@@ -1,9 +1,40 @@
+/* Стили для ineax.html */
+
+:root {
+    --primary-text-color: #757575; 
+    --accent-color: #2196F3;
+    --accent-color-two: #FFFFFF;
+    --primary-background-color: #FFFFFF;
+    --title-text-color: #212121;
+    --section-team-color: #F5F4FA;
+    --footer-color: #2F303A;
+    --buttom-text-color: #ffffff;
+    --buttom-background-color: #2196F3;
+} 
+
+ /* --primary-text-color: #757575;      первинний-тектовий-колір(основной цвет текста)  
+ --accent-color: #2196F3;               акцент-цвет (додатковий колір на я кому робимо акцент)                 
+ --accent-color-two: #FFFFFF;           акцент-цвет (додатковий другій колір)
+ --primary-background-color: #FFFFFF;   первинний фоновий колір
+ --title-text-color: #212121;           заголовок техта колір
+ --section-team-color: #F5F4FA;         секції команда колір
+ --footer-color: #2F303A;               футера цвет
+ --buttom-text-color: #ffffff;          цвет текста кнопки
+ --buttom-background-color: #2196F3;    цвет фона кнопки*/
+ 
+
 /* body */
 
 body {
-    background-color: #FFFFFF;
-    color: #757575;
+    font-family: 'Roboto', 'Tangerine', sans-serif;
+    background-color: var(--primary-background-color);
+    color: var(--primary-text-color);
 }
+
+.body, a {
+    text-decoration: none;
+}
+/* Отменяем подчеркивание у ссылки */
 
 .list {
     list-style: none;
@@ -14,59 +45,216 @@ body {
 все точки на всем сайте написавши
 ul {list-style: none;} */
 
+
+
 /* header */
 /* nav */
-.logo { 
-    color: ;
-
+.logo {
+    font-family: Raleway;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
 }
 
 .logo-web {
-    color: #2196F3;
+    color: var(--accent-color);
 }
 
 .logo-studio {
-    color: #000000;
+    color: var(--title-text-color);
 }
 
 /* site-nav */
 
 .site-nav .link {
-    color: #212121;
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
 }
 
 .site-nav .link:hover,
 .site-nav .link:focus {
-    color: #2196F3;
+    color: var(--accent-color);
+}
+
+
+.site-nav .link.current{
+    color: var(--accent-color);
 }
 
 /* connecrion */
+.connection .link {
+    color: var(--primary-text-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+} 
 
+.connection .link:hover,
+.connection .link:focus {
+    color: var(--accent-color);
+}
 
-
+.site-nav .link .current a {
+    color: var(--accent-color);
+}
 /* main */
 /* section-hero */
 
 .section-hero { 
-    color: #FFFFFF;
+    color: var(--accent-color-two);
+    background-color: #2F303A;
 }
 
 .section-hero-title {
-
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
 }
 
+.buttom {
+    color: var(--buttom-text-color);
+    background-color: var(--buttom-background-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+
+    cursor: pointer;
+}
+
+/* <!--Наші переваги--> */
 /* section  */
+.visually-hidden {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+/* < !--Спрятали заголовок ! ! ! --> */
+
 .section-title {
-    color: #212121;
+    color: var(--title-text-color);
 }
 
-.feature-list
+/* feature-list-title */
 
+.feature-list-title {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+}
 
- /* основной цвет фона #FFFFFF */
- /* вторичный цвет фона #F5F4FA */
+.feature-list p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+}
+/* < !--Чим ми займаємося--> */
+ 
+.section-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17px;
+}
 
- /* основной цвет текста #757575*/
- /* вторичній цвет текста #212121  */
+/* < !--Наша команда--> */
 
- /* акцент #2196F3 */
+.section-team {
+background-color: var(--section-team-color);
+}
+
+.team-name {
+    color: var(--title-text-color);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.19px;
+}
+
+.team-name p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.19px;
+}
+/* < !--Футер--> */
+
+.footer {
+background-color: var(--footer-color);
+}
+
+.footer .logo-web {
+    color: var(--accent-color);
+}
+
+.footer .logo-studio {
+    color: var(--accent-color-two);
+}
+
+.footer .map-link {
+    color: var(--accent-color-two);
+}
+
+.address .link {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.map-link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71px;
+    }
+ 
+.address .link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71px;
+}
+
+.link:hover,
+.link:focus {
+    color: var(--accent-color)
+}
+
+.map-link:hover,
+.map-link:focus {
+    color: var(--accent-color)
+}
+
+/* ----------------------------------------------------------------------- */
+
+/* Стили для portfolio.html */
+
+.buttom-portfolio {
+    color: #212121;
+    background-color: #F5F4FA;
+
+    cursor: pointer;
+}
+
+.buttom-portfolio:hover, 
+.buttom-portfolio:focus {
+    color: var(--buttom-text-color);
+    background-color: var(--buttom-background-color);
+}
+
+.section-title-portfolio {
+    color: var(--title-text-color);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+}
+
+.section-title-portfolio {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.9;
+}
