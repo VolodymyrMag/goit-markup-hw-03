@@ -24,6 +24,17 @@
  --buttom-background-color: #2196F3;    цвет фона кнопки*/
  
 
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/* Глобальний border-box Стандартна блокова модель в сучасних проектах - це border-box.
+ Для того щоб не ставити властивість box-sizing кожному елементу окремо,
+на самому початку файлу стилів використовується наступний CSS-код. */
+
 /* body */
 
 body {
@@ -38,32 +49,64 @@ body {
 }
 /* Отменяем подчеркивание у ссылки */
 
-.section-header .container {
-    width: 1200px;
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    padding: 0;
+    margin: 0;
 }
+/* скидаемо в нуль для зручної работи */
 
-.container {
-    border: 1px solid tomato;
+img {
+    display: block;
+    min-width: 100%;
+    height: auto;
 }
+/* допомогае коректно відображати сайт при зменшенні екрану */
+
+/* УТІЛІТИ !!! */
 
 .list {
+    padding: 0;
+    margin: 0;
     list-style: none;
 }
-/* Этот селектор .list выключает точки
-в тех списках ul в класс которых 
-мы его вставляем!  а можно выключить 
+
+/* Этот селектор .list выключает точки в тех списках ul в класс которых мы его вставляем!  а можно выключить 
 все точки на всем сайте написавши
 ul {list-style: none;} */
 
+.container {
+    width: 1200px;
+    margin: auto;
 
+    /* border: 1px solid tomato; */
+}
 
 /* header */
 /* nav */
+
+.section-header {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.main-nav { 
+    display: flex;
+    align-items: center;
+}
+
 .logo {
+    display: block;
+    margin-left: 15px;
+    padding-top: 24px;
+    padding-bottom: 25px;
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 26px;
@@ -81,7 +124,15 @@ ul {list-style: none;} */
 
 /* site-nav */
 
+.site-nav {
+    display: flex; 
+    margin-left: 93px;
+}
+
 .site-nav .link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -94,13 +145,41 @@ ul {list-style: none;} */
     color: var(--accent-color);
 }
 
-
 .site-nav .link.current{
     color: var(--accent-color);
 }
 
+.site-nav .item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.site-nav .link .current a {
+    color: var(--accent-color);
+}
+
 /* connecrion */
+
+.connection {
+     display: flex;
+     margin-left: auto;
+}
+
+.connection .item:not(:last-child) {
+    margin-right: 50px;
+}
+.connection .item:last-child {
+    margin-right: 15px;
+}
+/* А можно і так зробити теж буде працювати 
+
+} .connection .item + .item  {
+    margin-right: 50px;*/
+
 .connection .link {
+     
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     color: var(--primary-text-color);
     font-weight: 500;
     font-size: 14px;
@@ -113,31 +192,33 @@ ul {list-style: none;} */
     color: var(--accent-color);
 }
 
-.site-nav .link .current a {
-    color: var(--accent-color);
-}
-
 /* main */
 /* section-hero */
 
+.container-hero {
+    display: flex;
+    flex-direction:column ;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    
+}
 .section-hero { 
+    
     color: var(--accent-color-two);
     background-color: #2F303A;
-
     text-align: center;
 }
 
-.section-hero-title {
-    
+.section-hero-title {    
+    width: 696px;
+    height: 120px;
     margin-bottom: 30px;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    background-color: tomato;
-    
-   
 }
 
 .buttom {
@@ -159,11 +240,25 @@ ul {list-style: none;} */
 
 .buttom:hover,
 .buttom:active {
-background-color: var(--buttom-background-active-color);
+    background-color: var(--buttom-background-active-color);
 }
 
 /* <!--Наші переваги--> */
 /* section  */
+
+.container-feature {
+    display: flex;
+}
+
+.feature-list {
+    display: flex;    
+    margin-top: 94px;
+    margin-bottom: 94px;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 30px;
+}
+
 .visually-hidden {
     position: absolute;
     white-space: nowrap;
@@ -178,11 +273,8 @@ background-color: var(--buttom-background-active-color);
 }
 /* < !--Спрятали заголовок ! ! ! --> */
 
-.section-title {
-    color: var(--title-text-color);
-}
 
-/* feature-list-title */
+/* feature */
 
 .feature-list-title {
     color: var(--title-text-color);
@@ -190,7 +282,8 @@ background-color: var(--buttom-background-active-color);
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.03em;
-    text-transform: uppercase;      
+    text-transform: uppercase;
+    margin-bottom: 10px;     
 }
 
 .feature-list-text {
@@ -198,12 +291,30 @@ background-color: var(--buttom-background-active-color);
     font-size: 14px;
     line-height: 1.71;
 }
+
+
 /* < !--Чим ми займаємося--> */
  
-.section-title {
+.container-work {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title-work {
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
+    margin: auto;  
+    margin-bottom: 50px; 
+    color: var(--title-text-color);
+}
+
+.work-list  {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 30px;
+    margin-bottom: 94px;
 }
 
 /* < !--Наша команда--> */
@@ -212,7 +323,38 @@ background-color: var(--buttom-background-active-color);
 background-color: var(--section-team-color);
 }
 
-.team-name {
+.container-team {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-title-team {
+    padding-top: 94px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    margin: auto;
+    margin-bottom: 50px;
+    color: var(--title-text-color);
+}
+
+.team {
+    display: flex;
+    padding-left: 15px;
+    padding-right: 15px;
+    gap: 30px;
+    margin-bottom: 94px;
+    }
+
+.team-img {
+    background-color: #fff;
+}
+
+.team-name { 
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -220,10 +362,13 @@ background-color: var(--section-team-color);
 }
 
 .team-name-text {
+    text-align: center;
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
+    margin-bottom: 30px;
 }
+
 /* < !--Футер--> */
 
 .footer {
@@ -246,7 +391,13 @@ background-color: var(--footer-color);
     color: rgba(255, 255, 255, 0.6);
 }
 
+.container-footer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
 .map-link {
+    margin-left: 15px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -254,6 +405,7 @@ background-color: var(--footer-color);
     }
  
 .address .link {
+    margin-left: 15px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -274,6 +426,38 @@ background-color: var(--footer-color);
 
 /* Стили для portfolio.html */
 
+
+.container-filter 
+
+
+.filter { display: flex;
+    justify-content: center;
+    margin-top: 94px;
+    margin-bottom: 50px;
+    gap: 8px;
+    
+}
+
+.button1 { 
+    padding: 6px 25px;
+}
+
+.button2 {
+    padding: 6px 22px;
+}
+
+.button3 {
+    padding: 6px 22px;
+}
+
+.button4 {
+    padding: 6px 22px;
+}
+
+.button5 {
+    padding: 6px 22px;
+}
+
 .buttom-portfolio {
     font-family: inherit;
     color: #212121;
@@ -282,6 +466,9 @@ background-color: var(--footer-color);
     font-size: 16px;
     line-height: 1.62;
     letter-spacing: 0.03em;
+    border: none;
+    border-radius: 4px;
+    
     cursor: pointer;
 }
 
@@ -291,20 +478,63 @@ background-color: var(--footer-color);
     background-color: var(--buttom-background-color);
 }
 
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 15px;
+    margin-right: 15px;
+
+}
+
+.filter-card {
+    width: 370px;
+    
+    background: var(--accent-color-two);
+    border: 1px solid #EEEEEE;
+}
+
+.filter-card:nth-child(-n+6) {
+  
+    margin-bottom: 30px;
+}
+
+.filter-card:nth-child(n+7) {
+     
+    margin-bottom: 94px;
+}
+
+.filter-card:hover,
+.filter-card:focus {
+    background-color: var(--primary-background-color);
+}
+
+.filter-card-div {
+    
+}
+
 .section-title-portfolio {
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+
+    padding: 20px 24px 4px 24px;
 }
 
 .section-title-portfolio-text {
-    width: 20px;
-    height: 20px;
+    color: var(--primary-text-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.9;
+    letter-spacing: 0.03em;
+
+    padding-top: 0px;
+    padding-right: 24px;
+    padding-bottom: 20px;
+    padding-left: 24px;
+       
 }
 
 /* продолжаем */
