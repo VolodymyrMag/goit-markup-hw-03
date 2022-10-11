@@ -84,6 +84,7 @@ ul {list-style: none;} */
 .container {
     width: 1200px;
     margin: auto;
+    padding:0 15px 0 15px;
 
     /* border: 1px solid tomato; */
 }
@@ -91,20 +92,16 @@ ul {list-style: none;} */
 /* header */
 /* nav */
 
-.section-header {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0 auto;
-}
-
 .main-nav { 
     display: flex;
-    align-items: center;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom : 1px solid #ECECEC;
 }
 
 .logo {
     display: block;
-    margin-left: 15px;
+    
     padding-top: 24px;
     padding-bottom: 25px;
     font-family: "Raleway", sans-serif;
@@ -126,7 +123,7 @@ ul {list-style: none;} */
 
 .site-nav {
     display: flex; 
-    margin-left: 93px;
+    padding-left: 93px;
 }
 
 .site-nav .link {
@@ -150,7 +147,7 @@ ul {list-style: none;} */
 }
 
 .site-nav .item:not(:last-child) {
-    margin-right: 40px;
+    padding-right: 40px;
 }
 
 .site-nav .link .current a {
@@ -161,15 +158,13 @@ ul {list-style: none;} */
 
 .connection {
      display: flex;
-     margin-left: auto;
+     padding-left: 344px;
 }
 
 .connection .item:not(:last-child) {
-    margin-right: 50px;
+    padding-right: 50px;
 }
-.connection .item:last-child {
-    margin-right: 15px;
-}
+
 /* А можно і так зробити теж буде працювати 
 
 } .connection .item + .item  {
@@ -195,25 +190,24 @@ ul {list-style: none;} */
 /* main */
 /* section-hero */
 
-.container-hero {
-    display: flex;
-    flex-direction:column ;
-    align-items: center;
-    justify-content: center;
-    height: 600px;
-    
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
 }
+   
 .section-hero { 
     
     color: var(--accent-color-two);
     background-color: #2F303A;
     text-align: center;
+    padding: 200px 0;
 }
 
-.section-hero-title {    
+.section-hero-title { 
+
     width: 696px;
     height: 120px;
-    margin-bottom: 30px;
+    margin: 0 auto 30px auto;
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -246,16 +240,17 @@ ul {list-style: none;} */
 /* <!--Наші переваги--> */
 /* section  */
 
+.feature {
+    padding-bottom: 0;
+}
+
 .container-feature {
     display: flex;
 }
 
 .feature-list {
     display: flex;    
-    margin-top: 94px;
-    margin-bottom: 94px;
-    padding-left: 15px;
-    padding-right: 15px;
+      
     gap: 30px;
 }
 
@@ -311,16 +306,17 @@ ul {list-style: none;} */
 
 .work-list  {
     display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
+    
     gap: 30px;
-    margin-bottom: 94px;
+   
 }
 
 /* < !--Наша команда--> */
 
 .section-team {
-background-color: var(--section-team-color);
+    padding-top: 94px;
+    padding-bottom: 94px;
+    background-color: var(--section-team-color);
 }
 
 .container-team {
@@ -329,32 +325,37 @@ background-color: var(--section-team-color);
 }
 
 .section-title-team {
-    padding-top: 94px;
+    
     font-weight: 700;
     font-size: 36px;
+    text-align: center;
     line-height: 1.17;
-    margin: auto;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     color: var(--title-text-color);
 }
 
 .team {
     display: flex;
-    padding-left: 15px;
-    padding-right: 15px;
     gap: 30px;
-    margin-bottom: 94px;
+    
+    
     }
+
+.team-div {
+padding-top: 30px;
+padding-bottom: 30px;
+}
 
 .team-img {
     background-color: #fff;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-name { 
     display: flex;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 10px;
+    
+    padding-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -366,13 +367,24 @@ background-color: var(--section-team-color);
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;
-    margin-bottom: 30px;
+    
+    
 }
 
 /* < !--Футер--> */
 
 .footer {
 background-color: var(--footer-color);
+}
+.footer .logo {
+    padding-top: 0;
+    padding-bottom: 20px;
+    width: 145px;   
+}
+
+
+.container-footer {
+    padding: 60px 0;
 }
 
 .footer .logo-web {
@@ -391,25 +403,22 @@ background-color: var(--footer-color);
     color: rgba(255, 255, 255, 0.6);
 }
 
-.container-footer {
-    margin-top: 60px;
-    margin-bottom: 60px;
-}
-
 .map-link {
-    margin-left: 15px;
+   
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    padding-bottom: 9px;
     }
  
 .address .link {
-    margin-left: 15px;
+    
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    padding-bottom: 9px;
 }
 
 .link:hover,
@@ -427,16 +436,22 @@ background-color: var(--footer-color);
 /* Стили для portfolio.html */
 
 
-.container-filter 
 
+.section-portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
 
-.filter { display: flex;
+.filter { 
+    display: flex;
     justify-content: center;
-    margin-top: 94px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
+   
     gap: 8px;
     
+   
 }
+
 
 .button1 { 
     padding: 6px 25px;
@@ -482,26 +497,28 @@ background-color: var(--footer-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: 15px;
-    margin-right: 15px;
 
+    background-color: violet;
+     
 }
 
 .filter-card {
     width: 370px;
-    
+    margin-right: 30px;
     background: var(--accent-color-two);
     border: 1px solid #EEEEEE;
+    
+
 }
 
-.filter-card:nth-child(-n+6) {
-  
-    margin-bottom: 30px;
+.filter-card:nth-child(3n) {
+  margin-right: 0;
+    
 }
 
 .filter-card:nth-child(n+7) {
      
-    margin-bottom: 94px;
+   
 }
 
 .filter-card:hover,
@@ -510,7 +527,8 @@ background-color: var(--footer-color);
 }
 
 .filter-card-div {
-    
+    padding: 20px 24px;
+     
 }
 
 .section-title-portfolio {
@@ -519,8 +537,6 @@ background-color: var(--footer-color);
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
-
-    padding: 20px 24px 4px 24px;
 }
 
 .section-title-portfolio-text {
@@ -529,13 +545,7 @@ background-color: var(--footer-color);
     font-size: 16px;
     line-height: 1.9;
     letter-spacing: 0.03em;
-
-    padding-top: 0px;
-    padding-right: 24px;
-    padding-bottom: 20px;
-    padding-left: 24px;
-       
-}
+  }
 
 /* продолжаем */
 /* на проверку ДЗ-3 */
