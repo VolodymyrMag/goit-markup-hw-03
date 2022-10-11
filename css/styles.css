@@ -497,31 +497,40 @@ background-color: var(--footer-color);
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-    background-color: violet;
-     
+    
 }
 
+/* ще є третій варіант метод calc так и сделал */
 .filter-card {
-    width: 370px;
+    /* width: 370px; */
+    width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
     background: var(--accent-color-two);
-    border: 1px solid #EEEEEE;
-    
-
+    border: 1px solid inherit #EEEEEE;
+   
 }
 
 .filter-card:nth-child(3n) {
   margin-right: 0;
-    
 }
 
 .filter-card:nth-last-child(-n + 3)
  {
      margin-bottom: 0;
-
 }
+
+/* а можно ще так зробити теж саме дати марджин-30 всім кроме 3го*/
+
+/* .filter-card:not(:nth-child(3n)) {
+    margin-right: 30px;
+}  */
+
+/* а можно ще так зробити знижніми трьома */
+
+/* .filter-card:not(:nth-last-child(-n + 3)) {
+    margin-bottom: 30px;
+} */
 
 .filter-card:hover,
 .filter-card:focus {
