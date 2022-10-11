@@ -507,7 +507,8 @@ background-color: var(--footer-color);
     margin-right: 30px;
     margin-bottom: 30px;
     background: var(--accent-color-two);
-    border: 1px solid inherit #EEEEEE;
+
+    border: 1px solid #EEEEEE;
    
 }
 
