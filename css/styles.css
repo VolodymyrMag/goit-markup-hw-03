@@ -501,6 +501,7 @@ background-color: var(--footer-color);
 }
 
 /* ще є третій варіант метод calc так и сделал */
+/* calc((100% - сумма маржинов в строке) / на количество елементов в строке*/
 .filter-card {
     /* width: 370px; */
     width: calc((100% - 60px) / 3);
@@ -508,7 +509,7 @@ background-color: var(--footer-color);
     margin-bottom: 30px;
     background: var(--accent-color-two);
 
-    border: 1px solid #EEEEEE;
+   
    
 }
 
@@ -540,7 +541,8 @@ background-color: var(--footer-color);
 
 .filter-card-div {
     padding: 20px 24px;
-     
+    border: 1px solid #EEEEEE;
+    border-top: none;
 }
 
 .section-title-portfolio {
