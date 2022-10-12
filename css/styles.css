@@ -342,8 +342,8 @@ ul {list-style: none;} */
     }
 
 .team-div {
-padding-top: 30px;
-padding-bottom: 30px;
+padding: 30px;
+
 }
 
 .team-img {
@@ -355,7 +355,7 @@ padding-bottom: 30px;
     display: flex;
     justify-content: center;
     
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     color: var(--title-text-color);
     font-weight: 500;
     font-size: 16px;
@@ -501,7 +501,7 @@ background-color: var(--footer-color);
 }
 
 /* ще є третій варіант метод calc так и сделал */
-/* calc((100% - сумма маржинов в строке) / на количество елементов в строке*/
+/* calc((100% - сумма маржинов в строке(или кол-во маржинов в строке помноженое на значение маржина в px)) / на количество елементов в строке*/
 .filter-card {
     /* width: 370px; */
     width: calc((100% - 60px) / 3);
@@ -546,6 +546,7 @@ background-color: var(--footer-color);
 }
 
 .section-title-portfolio {
+    margin-bottom: 4px;
     color: var(--title-text-color);
     font-weight: 700;
     font-size: 18px;
